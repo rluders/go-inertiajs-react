@@ -11,8 +11,8 @@ import (
 
 	"github.com/petaki/inertia-go"
 
-	"github.com/rluders/sumelms/resources/views"
-	"github.com/rluders/sumelms/static"
+	"github.com/rluders/go-inertiajs-react/resources/views"
+	"github.com/rluders/go-inertiajs-react/static"
 )
 
 var inertiaManager *inertia.Inertia
@@ -22,7 +22,7 @@ func main() {
 	version := ""
 
 	inertiaManager = inertia.NewWithFS(url, "app.gohtml", version, views.Templates)
-	inertiaManager.Share("title", "Go with InertiaJS, React and Laravel Mix.")
+	inertiaManager.Share("title", "Inertia Go with React and Laravel Mix")
 	inertiaManager.ShareFunc("mix", func(path string) (string, error) {
 		return "/" + path, nil
 	})
