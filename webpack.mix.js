@@ -11,7 +11,7 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'static/js')
+mix.ts('resources/js/app.tsx', 'static/js')
     .react()
     .postCss('resources/css/app.css', 'static/css', [
         require('postcss-import'),
