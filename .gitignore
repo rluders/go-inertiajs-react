@@ -5,3 +5,7 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+
+# ignore static generated folder but keep embed.go
+static/**
+!static/embed.go
