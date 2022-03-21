@@ -1,0 +1,15 @@
+server:
+  host: ":8080"
+database:
+  driver: postgres
+  host: postgres
+  port: 5432
+  username: postgres
+  password: secret@123
+  database: sumelms_course
+inertia:
+  url: http://localhost
+  rootTemplate: app.gohtml
+  version: 1.0
+  shared:
+    title: "Inertia, Go, React, Typescript, and Laravel Mix"

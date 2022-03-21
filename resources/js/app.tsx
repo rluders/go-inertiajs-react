@@ -2,13 +2,14 @@ require('./bootstrap')
 
 import React from 'react'
 import { render } from 'react-dom'
-import { createInertiaApp } from '@inertiajs/inertia-react'
+import {createInertiaApp, usePage} from '@inertiajs/inertia-react'
 import { InertiaProgress } from '@inertiajs/progress'
 
-const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Laravel'
-
 createInertiaApp({
-    title: (title) => `${title} - ${appName}`,
+    title: (title) => {
+        let appName = usePage().props.title
+        return `${title} - ${appName}`
+    },
     resolve: (name) => require(`./Pages/${name}`),
     setup({ el, App, props }) {
         return render(<App {...props} />, el)

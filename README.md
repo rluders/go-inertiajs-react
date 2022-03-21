@@ -11,7 +11,7 @@ so you can have an embed [ReactJS](https://reactjs.org/) SPA without building an
 $ yarn install
 $ yarn dev
 $ go get ./...
-$ go run main.go
+$ go run cmd/server/main.go
 ```
 # License
 
